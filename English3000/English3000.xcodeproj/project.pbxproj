@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51BEBB9F1D3F51F0002D15A8 /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 51BEBB9C1D3F51F0002D15A8 /* db.sqlite */; };
+		51BEBBA01D3F51F0002D15A8 /* dictd_anh-viet.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 51BEBB9D1D3F51F0002D15A8 /* dictd_anh-viet.sqlite */; };
+		51BEBBA11D3F51F0002D15A8 /* pattern.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 51BEBB9E1D3F51F0002D15A8 /* pattern.sqlite */; };
 		59FD6CC21D3F33210010F6A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FD6CC11D3F33210010F6A1 /* AppDelegate.swift */; };
 		59FD6CC71D3F33210010F6A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59FD6CC51D3F33210010F6A1 /* Main.storyboard */; };
 		59FD6CC91D3F33210010F6A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59FD6CC81D3F33210010F6A1 /* Assets.xcassets */; };
@@ -42,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		51BEBB9C1D3F51F0002D15A8 /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.sqlite; sourceTree = "<group>"; };
+		51BEBB9D1D3F51F0002D15A8 /* dictd_anh-viet.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dictd_anh-viet.sqlite"; sourceTree = "<group>"; };
+		51BEBB9E1D3F51F0002D15A8 /* pattern.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = pattern.sqlite; sourceTree = "<group>"; };
 		59FD6CBE1D3F33210010F6A1 /* English3000.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = English3000.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59FD6CC11D3F33210010F6A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59FD6CC61D3F33210010F6A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -93,6 +99,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51BEBB9B1D3F51DB002D15A8 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				51BEBB9C1D3F51F0002D15A8 /* db.sqlite */,
+				51BEBB9D1D3F51F0002D15A8 /* dictd_anh-viet.sqlite */,
+				51BEBB9E1D3F51F0002D15A8 /* pattern.sqlite */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		59FD6CB51D3F33210010F6A1 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +163,7 @@
 		59FD6CEF1D3F33650010F6A1 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				51BEBB9B1D3F51DB002D15A8 /* Database */,
 				59FD6CF21D3F33650010F6A1 /* Services */,
 				59FD6CF11D3F33650010F6A1 /* Object */,
 				59FD6D011D3F34940010F6A1 /* Library */,
@@ -332,7 +349,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51BEBBA01D3F51F0002D15A8 /* dictd_anh-viet.sqlite in Resources */,
 				59FD6CCC1D3F33210010F6A1 /* LaunchScreen.storyboard in Resources */,
+				51BEBB9F1D3F51F0002D15A8 /* db.sqlite in Resources */,
+				51BEBBA11D3F51F0002D15A8 /* pattern.sqlite in Resources */,
 				59FD6D121D3F36A30010F6A1 /* Localizable.strings in Resources */,
 				59FD6CF81D3F33C20010F6A1 /* BaseViewController.xib in Resources */,
 				59FD6CC91D3F33210010F6A1 /* Assets.xcassets in Resources */,
