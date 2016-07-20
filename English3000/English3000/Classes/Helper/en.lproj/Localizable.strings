@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  English3000
+
+  Created by khactao on 7/20/16.
+  Copyright © 2016 khactao. All rights reserved.
+*/
+
+// MARK: - Home Screen
+"TITLE_HOME" = "Home";
