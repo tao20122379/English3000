@@ -80,6 +80,54 @@ class Constants {
         return NSLocalizedString(key, comment: "")
     }
     
+    internal func stringReplaces(text: String, key: [String]) -> String {
+        var textReplace = text
+        key.forEach { (keyString) in
+            textReplace = textReplace.stringByReplacingOccurrencesOfString(keyString, withString: "")
+        }
+        textReplace = self.stringSpecialCharactor(textReplace, keyString: ["ˈ"], withString: ["'"])
+        return textReplace
+    }
+    
+    internal func stringSpecialCharactor(text: String, keyString: [String], withString: [String]) -> String {
+        var textSpecialFormat: String = text
+        for i in 0..<keyString.count {
+            textSpecialFormat = textSpecialFormat.stringByReplacingOccurrencesOfString(keyString[i], withString: withString[i])
+        }
+        return textSpecialFormat
+    }
+    
+    
+    internal func formatWordDetail(text: String) -> [String] {
+        var textFormat = text
+        textFormat = self.stringSpecialCharactor(textFormat, keyString: ["+", "\n="], withString: [":", "\n+"])
+        return textFormat.componentsSeparatedByString("\n")
+    }
+    
+    internal func checkWordLineType(text: String) -> WordLineType {
+        if text.isEmpty {
+            return .WordLineTypeNone
+        }
+        else {
+            if text[text.startIndex] == "@" {
+                return .WordLineTypeName
+            }
+            else if text[text.startIndex] == "*" {
+                return .WordLineTypeTitle
+            }
+            else if text[text.startIndex] == "-" {
+                return .WordLineTypeDetail1
+            }
+            else if text[text.startIndex] == "+" {
+                return .WordLineTypeDetail2
+            }
+            else {
+                return .WordLineTypeNone
+            }
+        }
+    }
+    
+
     
     // define font
     static let kRegularFont = UIFont(name: "Hiragino Sans", size: 13)
