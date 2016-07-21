@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailSentenceViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class DetailSentenceViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, EventOfCellSentence {
 
     var arrSentences = Array<SentenceModel>()
     var topicId: String?
@@ -48,9 +48,17 @@ class DetailSentenceViewController: UIViewController, UITableViewDataSource, UIT
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("detailCell", forIndexPath: indexPath) as! DetailSentenceTableViewCell
+        cell.tag = indexPath.row
+        cell.delegate = self
         cell.lbSentence_en.text = self.arrSentences[indexPath.row].sentence_en
         cell.lbSentence_vi.text = self.arrSentences[indexPath.row].sentence_vi
         return cell
+    }
+
+    func handleEventDidTapSound(tag: Int) {
+//        Constants().CreateTextToSpeech(self.arrSentences[tag].sentence_en!)
+        let tabbar = self.navigationController?.tabBarController as! TabbarController
+        tabbar.CreateTextToSpeech(self.arrSentences[tag].sentence_en!)
     }
     
     

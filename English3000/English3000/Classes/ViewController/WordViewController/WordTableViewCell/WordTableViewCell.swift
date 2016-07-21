@@ -13,6 +13,12 @@ enum MarkState {
     case None
 }
 
+protocol EventOfCell {
+    func handleEventDidTapSound(tag: Int)
+    func handleEventDidTapStar(cell: UITableViewCell)
+
+}
+
 class WordTableViewCell: UITableViewCell {
 
     @IBOutlet var lbName: UILabel!
@@ -20,6 +26,7 @@ class WordTableViewCell: UITableViewCell {
     @IBOutlet var lbCategory: UILabel!
     @IBOutlet var lbViContent: UILabel!
     @IBOutlet var btStar: UIButton!
+    var delegate: EventOfCell?
     var state = MarkState.None
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,17 +40,19 @@ class WordTableViewCell: UITableViewCell {
     }
     
     @IBAction func soundDidTapped(sender: UIButton) {
-        print("sound")
+        self.delegate?.handleEventDidTapSound(self.tag)
     }
+    
     @IBAction func starDidTapped(sender: UIButton) {
         print("star")
-
-        if self.state == MarkState.None {
+        if (self.btStar.currentImage!.isEqual(UIImage(named:"favorite")))   {
             self.btStar.setImage(UIImage(named: "favorite-select"), forState: .Normal)
-            self.state = MarkState.Check
-        }else {
+        } else {
             self.btStar.setImage(UIImage(named: "favorite"), forState: .Normal)
-            self.state = MarkState.None
+            
         }
+        
+        self.delegate?.handleEventDidTapStar(self)
+
     }
 }

@@ -28,6 +28,7 @@
 		51E3E5971D40697400825995 /* DetailSentenceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E3E5951D40697400825995 /* DetailSentenceViewController.xib */; };
 		51E3E59B1D406A7E00825995 /* DetailSentenceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3E5991D406A7E00825995 /* DetailSentenceTableViewCell.swift */; };
 		51E3E59C1D406A7E00825995 /* DetailSentenceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E3E59A1D406A7E00825995 /* DetailSentenceTableViewCell.xib */; };
+		51E3E59E1D4080CC00825995 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51E3E59D1D4080CC00825995 /* AVFoundation.framework */; };
 		59FD6CC71D3F33210010F6A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59FD6CC51D3F33210010F6A1 /* Main.storyboard */; };
 		59FD6CCC1D3F33210010F6A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59FD6CCA1D3F33210010F6A1 /* LaunchScreen.storyboard */; };
 		59FD6CD71D3F33210010F6A1 /* English3000Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FD6CD61D3F33210010F6A1 /* English3000Tests.swift */; };
@@ -88,6 +89,7 @@
 		51E3E5951D40697400825995 /* DetailSentenceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailSentenceViewController.xib; sourceTree = "<group>"; };
 		51E3E5991D406A7E00825995 /* DetailSentenceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailSentenceTableViewCell.swift; sourceTree = "<group>"; };
 		51E3E59A1D406A7E00825995 /* DetailSentenceTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailSentenceTableViewCell.xib; sourceTree = "<group>"; };
+		51E3E59D1D4080CC00825995 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		54908BC6576488B6531160E5 /* Pods-English3000Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-English3000Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-English3000Tests/Pods-English3000Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		59FD6CBE1D3F33210010F6A1 /* English3000.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = English3000.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59FD6CC61D3F33210010F6A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51E3E59E1D4080CC00825995 /* AVFoundation.framework in Frameworks */,
 				51965D291D3FDEBF00C55BAB /* libsqlite3.tbd in Frameworks */,
 				AD9B700F84FE03F0F0800929 /* Pods_English3000.framework in Frameworks */,
 			);
@@ -356,6 +359,7 @@
 		9A1B083FDECDCEF52D978F11 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				51E3E59D1D4080CC00825995 /* AVFoundation.framework */,
 				51965D281D3FDEBF00C55BAB /* libsqlite3.tbd */,
 				2EA4792746B4552FE5CB0604 /* Pods_English3000.framework */,
 				9816D7D5FD9066EA3476A146 /* Pods_English3000Tests.framework */,
@@ -453,7 +457,7 @@
 				TargetAttributes = {
 					59FD6CBD1D3F33210010F6A1 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 9G3UQ53US6;
+						DevelopmentTeam = H2BTSUH442;
 					};
 					59FD6CD11D3F33210010F6A1 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -826,11 +830,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = English3000/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = khactao.English3000;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "English3000-Bridging-Header.h";
 			};
 			name = Debug;
@@ -841,11 +847,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = English3000/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = khactao.English3000;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "English3000-Bridging-Header.h";
 			};
 			name = Release;

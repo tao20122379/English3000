@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import AVFoundation
+
 
 class TabbarController: UITabBarController , UITabBarControllerDelegate{
     
     //MARK: - Variable and IBOutlet
     var lastSelectedIndex : NSInteger = 0
     var tabbarHeight : CGFloat = 0.0
+    let synthesizer = AVSpeechSynthesizer()
+
     @IBOutlet var footerView : UIView?
     
     //MARK: - Life cycle
@@ -58,6 +62,20 @@ class TabbarController: UITabBarController , UITabBarControllerDelegate{
 
         self.viewControllers = [nav1, nav2, nav3]
  
+    }
+    
+    func CreateTextToSpeech(text: String) {
+        self.synthesizer.stopSpeakingAtBoundary(.Immediate)
+        let utterance = AVSpeechUtterance(string: text)
+        utterance.voice = AVSpeechSynthesisVoice(language: "en-IE")
+        
+        if (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_7_1)
+        {
+            utterance.rate = 0.1;
+        } else {
+            utterance.rate = 0.1;
+        }
+        self.synthesizer.speakUtterance(utterance)
     }
 }
     

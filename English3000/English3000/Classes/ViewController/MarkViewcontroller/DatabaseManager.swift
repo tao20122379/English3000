@@ -58,10 +58,7 @@ class DatabaseManager {
             completionHandler(true, resultDatas)
         }
         
-        
-    
     }
-    
     
     func loadSentence(dbName: String, executyQuery: String, completionHandler: CompletionHandler) {
         self.queryDatabase(dbName, executyQuery: executyQuery) { (state, data) in
@@ -97,10 +94,20 @@ class DatabaseManager {
         }
         
     }
-
     
-    
-    
-    
+    func updateDatabase(dbName: String, executyQuery: String) {
+        let sourcePath = NSBundle.mainBundle().pathForResource(dbName, ofType: "sqlite")
+        let database = FMDatabase(path: sourcePath)
+        if !database.open() {
+            print("Unable to open database")
+            return
+        }
+        do {
+             try database.executeUpdate(executyQuery, values: nil)
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
+        database.close()
+    }
     
 }
