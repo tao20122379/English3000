@@ -831,7 +831,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = khactao.English3000;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/hoangduoc/Desktop/English3000/English3000/English3000-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "English3000-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -846,7 +846,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = khactao.English3000;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/hoangduoc/Desktop/English3000/English3000/English3000-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "English3000-Bridging-Header.h";
 			};
 			name = Release;
 		};
