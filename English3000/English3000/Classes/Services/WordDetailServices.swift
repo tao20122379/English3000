@@ -13,9 +13,8 @@ class WordDetailServices: NSObject {
     class func getWordDetail(word: WordModel, completionHandler: CompletionHandler) {
         
         let searchKey = "@"+word.name+" /"+Constants().stringReplaces(word.read!, key: ["[", "]"])+"/"
-        
+        print(searchKey)
         DatabaseManager().queryDatabase("dictd_anh_viet", executyQuery: "SELECT * FROM EVDictionary WHERE meaning LIKE \"%" + searchKey + "%\"") { (status, data) in
-            
             
             let rs = data as! FMResultSet
             

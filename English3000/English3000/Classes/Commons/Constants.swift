@@ -13,12 +13,19 @@ import CoreLocation
 // MARK: CompletionHandler
 typealias CompletionHandler = (Bool, AnyObject?) -> ()
 
+enum WordLineType: Int {
+    case WordLineTypeName           = 0
+    case WordLineTypeTitle          = 1
+    case WordLineTypeDetail1        = 2
+    case WordLineTypeDetail2        = 3
+    case WordLineTypeNone           = 4
+}
 
 class Constants {
     //MARK: - Contants will use in all class
-        
+    
     // APP URL
-
+    
     static let kVersion = ""
     static let kBaseImageURL = ""
     static let kTimeoutIntervalForRequest = NSTimeInterval(30)
@@ -78,6 +85,53 @@ class Constants {
     
     internal func LANGTEXT(key: String)-> String{
         return NSLocalizedString(key, comment: "")
+    }
+    
+    internal func stringReplaces(text: String, key: [String]) -> String {
+        var textReplace = text
+        key.forEach { (keyString) in
+            textReplace = textReplace.stringByReplacingOccurrencesOfString(keyString, withString: "")
+        }
+        textReplace = self.stringSpecialCharactor(textReplace, keyString: ["ˈ"], withString: ["'"])
+        return textReplace
+    }
+    
+    internal func stringSpecialCharactor(text: String, keyString: [String], withString: [String]) -> String {
+        var textSpecialFormat: String = text
+        for i in 0..<keyString.count {
+            textSpecialFormat = textSpecialFormat.stringByReplacingOccurrencesOfString(keyString[i], withString: withString[i])
+        }
+        return textSpecialFormat
+    }
+    
+    
+    internal func formatWordDetail(text: String) -> [String] {
+        var textFormat = text
+        textFormat = self.stringSpecialCharactor(textFormat, keyString: ["+", "\n="], withString: [":", "\n+"])
+        return textFormat.componentsSeparatedByString("\n")
+    }
+    
+    internal func checkWordLineType(text: String) -> WordLineType {
+        if text.isEmpty {
+            return .WordLineTypeNone
+        }
+        else {
+            if text[text.startIndex] == "@" {
+                return .WordLineTypeName
+            }
+            else if text[text.startIndex] == "*" {
+                return .WordLineTypeTitle
+            }
+            else if text[text.startIndex] == "-" {
+                return .WordLineTypeDetail1
+            }
+            else if text[text.startIndex] == "+" {
+                return .WordLineTypeDetail2
+            }
+            else {
+                return .WordLineTypeNone
+            }
+        }
     }
     
     

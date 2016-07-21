@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		51965D111D3FCAFB00C55BAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51965D101D3FCAFB00C55BAB /* Assets.xcassets */; };
 		51965D141D3FCC0D00C55BAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51965D131D3FCC0D00C55BAB /* AppDelegate.swift */; };
-		51965D1A1D3FDAE700C55BAB /* WordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51965D181D3FDAE700C55BAB /* WordViewController.swift */; };
-		51965D1B1D3FDAE700C55BAB /* WordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51965D191D3FDAE700C55BAB /* WordViewController.xib */; };
 		51965D1E1D3FDAF600C55BAB /* SentenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51965D1C1D3FDAF600C55BAB /* SentenceViewController.swift */; };
 		51965D1F1D3FDAF600C55BAB /* SentenceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51965D1D1D3FDAF600C55BAB /* SentenceViewController.xib */; };
 		51965D261D3FDBA500C55BAB /* MarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51965D241D3FDBA500C55BAB /* MarkViewController.swift */; };
@@ -29,6 +27,14 @@
 		51E3E59C1D406A7E00825995 /* DetailSentenceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E3E59A1D406A7E00825995 /* DetailSentenceTableViewCell.xib */; };
 		5933A14C1D40CB00003DC711 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5933A14B1D40CB00003DC711 /* DatabaseManager.swift */; };
 		5933A14E1D40CB13003DC711 /* WordDetailServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5933A14D1D40CB13003DC711 /* WordDetailServices.swift */; };
+		5933A1531D40CC70003DC711 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5933A1521D40CC70003DC711 /* HeaderView.swift */; };
+		5933A1551D40CC96003DC711 /* WordDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5933A1541D40CC96003DC711 /* WordDetailViewController.swift */; };
+		5933A1571D40CCFA003DC711 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5933A1561D40CCFA003DC711 /* HeaderView.xib */; };
+		5933A15A1D40D1E3003DC711 /* WordLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5933A1581D40D1E3003DC711 /* WordLineCell.swift */; };
+		5933A15B1D40D1E3003DC711 /* WordLineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5933A1591D40D1E3003DC711 /* WordLineCell.xib */; };
+		5933A15D1D40D334003DC711 /* WordDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5933A15C1D40D334003DC711 /* WordDetailViewController.xib */; };
+		5933A1601D40D3B5003DC711 /* WordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5933A15E1D40D3B5003DC711 /* WordViewController.swift */; };
+		5933A1611D40D3B5003DC711 /* WordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5933A15F1D40D3B5003DC711 /* WordViewController.xib */; };
 		59FD6CC71D3F33210010F6A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59FD6CC51D3F33210010F6A1 /* Main.storyboard */; };
 		59FD6CCC1D3F33210010F6A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59FD6CCA1D3F33210010F6A1 /* LaunchScreen.storyboard */; };
 		59FD6CD71D3F33210010F6A1 /* English3000Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FD6CD61D3F33210010F6A1 /* English3000Tests.swift */; };
@@ -70,8 +76,6 @@
 		517E33771D3F73E300C0AEA2 /* English3000-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "English3000-Bridging-Header.h"; sourceTree = "<group>"; };
 		51965D101D3FCAFB00C55BAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51965D131D3FCC0D00C55BAB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		51965D181D3FDAE700C55BAB /* WordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordViewController.swift; sourceTree = "<group>"; };
-		51965D191D3FDAE700C55BAB /* WordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WordViewController.xib; sourceTree = "<group>"; };
 		51965D1C1D3FDAF600C55BAB /* SentenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentenceViewController.swift; sourceTree = "<group>"; };
 		51965D1D1D3FDAF600C55BAB /* SentenceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SentenceViewController.xib; sourceTree = "<group>"; };
 		51965D241D3FDBA500C55BAB /* MarkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +95,14 @@
 		54908BC6576488B6531160E5 /* Pods-English3000Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-English3000Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-English3000Tests/Pods-English3000Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5933A14B1D40CB00003DC711 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		5933A14D1D40CB13003DC711 /* WordDetailServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordDetailServices.swift; sourceTree = "<group>"; };
+		5933A1521D40CC70003DC711 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		5933A1541D40CC96003DC711 /* WordDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordDetailViewController.swift; sourceTree = "<group>"; };
+		5933A1561D40CCFA003DC711 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		5933A1581D40D1E3003DC711 /* WordLineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordLineCell.swift; sourceTree = "<group>"; };
+		5933A1591D40D1E3003DC711 /* WordLineCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WordLineCell.xib; sourceTree = "<group>"; };
+		5933A15C1D40D334003DC711 /* WordDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WordDetailViewController.xib; sourceTree = "<group>"; };
+		5933A15E1D40D3B5003DC711 /* WordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordViewController.swift; sourceTree = "<group>"; };
+		5933A15F1D40D3B5003DC711 /* WordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WordViewController.xib; sourceTree = "<group>"; };
 		59FD6CBE1D3F33210010F6A1 /* English3000.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = English3000.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59FD6CC61D3F33210010F6A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		59FD6CCB1D3F33210010F6A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -178,8 +190,8 @@
 		51965D171D3FDAAE00C55BAB /* WordViewController */ = {
 			isa = PBXGroup;
 			children = (
-				51965D181D3FDAE700C55BAB /* WordViewController.swift */,
-				51965D191D3FDAE700C55BAB /* WordViewController.xib */,
+				5933A15E1D40D3B5003DC711 /* WordViewController.swift */,
+				5933A15F1D40D3B5003DC711 /* WordViewController.xib */,
 				51E3E58E1D4058C700825995 /* WordTableViewCell */,
 			);
 			path = WordViewController;
@@ -237,6 +249,8 @@
 			children = (
 				5933A1501D40CBB6003DC711 /* HeaderView */,
 				5933A1511D40CBB6003DC711 /* WordLineCell */,
+				5933A15C1D40D334003DC711 /* WordDetailViewController.xib */,
+				5933A1541D40CC96003DC711 /* WordDetailViewController.swift */,
 			);
 			path = WordDetailViewController;
 			sourceTree = "<group>";
@@ -244,6 +258,8 @@
 		5933A1501D40CBB6003DC711 /* HeaderView */ = {
 			isa = PBXGroup;
 			children = (
+				5933A1521D40CC70003DC711 /* HeaderView.swift */,
+				5933A1561D40CCFA003DC711 /* HeaderView.xib */,
 			);
 			path = HeaderView;
 			sourceTree = "<group>";
@@ -251,6 +267,8 @@
 		5933A1511D40CBB6003DC711 /* WordLineCell */ = {
 			isa = PBXGroup;
 			children = (
+				5933A1581D40D1E3003DC711 /* WordLineCell.swift */,
+				5933A1591D40D1E3003DC711 /* WordLineCell.xib */,
 			);
 			path = WordLineCell;
 			sourceTree = "<group>";
@@ -520,17 +538,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51965D1B1D3FDAE700C55BAB /* WordViewController.xib in Resources */,
 				51BEBBA01D3F51F0002D15A8 /* dictd_anh_viet.sqlite in Resources */,
 				59FD6CCC1D3F33210010F6A1 /* LaunchScreen.storyboard in Resources */,
 				51E3E59C1D406A7E00825995 /* DetailSentenceTableViewCell.xib in Resources */,
 				51BEBBA11D3F51F0002D15A8 /* pattern.sqlite in Resources */,
+				5933A15B1D40D1E3003DC711 /* WordLineCell.xib in Resources */,
 				51965D271D3FDBA500C55BAB /* MarkViewController.xib in Resources */,
+				5933A15D1D40D334003DC711 /* WordDetailViewController.xib in Resources */,
 				51965D1F1D3FDAF600C55BAB /* SentenceViewController.xib in Resources */,
 				59FD6D121D3F36A30010F6A1 /* Localizable.strings in Resources */,
 				59FD6CF81D3F33C20010F6A1 /* BaseViewController.xib in Resources */,
 				51E3E5971D40697400825995 /* DetailSentenceViewController.xib in Resources */,
+				5933A1611D40D3B5003DC711 /* WordViewController.xib in Resources */,
 				51965D2D1D3FE9B700C55BAB /* db.sqlite in Resources */,
+				5933A1571D40CCFA003DC711 /* HeaderView.xib in Resources */,
 				51E3E5921D4058DA00825995 /* WordTableViewCell.xib in Resources */,
 				51965D111D3FCAFB00C55BAB /* Assets.xcassets in Resources */,
 				59FD6CC71D3F33210010F6A1 /* Main.storyboard in Resources */,
@@ -682,9 +703,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5933A14C1D40CB00003DC711 /* DatabaseManager.swift in Sources */,
+				5933A15A1D40D1E3003DC711 /* WordLineCell.swift in Sources */,
+				5933A1601D40D3B5003DC711 /* WordViewController.swift in Sources */,
+				5933A1551D40CC96003DC711 /* WordDetailViewController.swift in Sources */,
+				5933A1531D40CC70003DC711 /* HeaderView.swift in Sources */,
 				59FD6CF71D3F33C20010F6A1 /* BaseViewController.swift in Sources */,
 				59FD6CFF1D3F34290010F6A1 /* FontsHelper.swift in Sources */,
-				51965D1A1D3FDAE700C55BAB /* WordViewController.swift in Sources */,
 				51BEBBA31D3F6362002D15A8 /* SentenceModel.swift in Sources */,
 				51E3E59B1D406A7E00825995 /* DetailSentenceTableViewCell.swift in Sources */,
 				5933A14E1D40CB13003DC711 /* WordDetailServices.swift in Sources */,
