@@ -8,11 +8,17 @@
 
 import UIKit
 
+protocol EventOfCellSentence {
+    func handleEventDidTapSound(tag: Int)
+    
+}
+
 class DetailSentenceTableViewCell: UITableViewCell {
 
     @IBOutlet var lbSentence_en: UILabel!
     @IBOutlet var lbSentence_vi: UILabel!
     @IBOutlet var btSound: UIButton!
+    var delegate: EventOfCellSentence?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,6 +31,6 @@ class DetailSentenceTableViewCell: UITableViewCell {
     }
     
     @IBAction func soundDidTapped(sender: UIButton) {
-       
+       self.delegate?.handleEventDidTapSound(self.tag)
     }
 }
