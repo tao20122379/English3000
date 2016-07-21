@@ -11,18 +11,14 @@ import UIKit
 import CoreLocation
 
 // MARK: CompletionHandler
-typealias CompletionHandler = (Bool, Int, AnyObject?) -> ()
+typealias CompletionHandler = (Bool, AnyObject?) -> ()
 
 
 class Constants {
     //MARK: - Contants will use in all class
         
     // APP URL
-    #if STAGING
-    static let kBaseURL = "http://paditech.com/atm_api/api/v1/"
-    #else
-    static let kBaseURL = "http://paditech.com/atm_api/api/v1/"
-    #endif
+
     static let kVersion = ""
     static let kBaseImageURL = ""
     static let kTimeoutIntervalForRequest = NSTimeInterval(30)

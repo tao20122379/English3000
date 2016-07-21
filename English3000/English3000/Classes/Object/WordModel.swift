@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+class WordModel: NSObject {
+    var id: String!
+    var name: String!
+    var category: String?
+    var read: String?
+    var vicontent: String?
+    var isread: String?
+    var meaning: String?
+    var isread_at: String?
+    var state: String?
+    
+}
