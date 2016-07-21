@@ -13,6 +13,13 @@ import CoreLocation
 // MARK: CompletionHandler
 typealias CompletionHandler = (Bool, AnyObject?) -> ()
 
+enum WordLineType: Int {
+    case WordLineTypeName           = 0
+    case WordLineTypeTitle          = 1
+    case WordLineTypeDetail1        = 2
+    case WordLineTypeDetail2        = 3
+    case WordLineTypeNone           = 4
+}
 
 class Constants {
     //MARK: - Contants will use in all class
