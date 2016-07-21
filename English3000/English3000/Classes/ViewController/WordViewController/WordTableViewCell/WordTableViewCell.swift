@@ -14,7 +14,7 @@ enum MarkState {
 }
 
 protocol EventOfCell {
-    func handleEventDidTapSound(tag: Int)
+    func handleEventDidTapSound(cell: UITableViewCell)
     func handleEventDidTapStar(cell: UITableViewCell)
 
 }
@@ -40,11 +40,10 @@ class WordTableViewCell: UITableViewCell {
     }
     
     @IBAction func soundDidTapped(sender: UIButton) {
-        self.delegate?.handleEventDidTapSound(self.tag)
+        self.delegate?.handleEventDidTapSound(self)
     }
     
     @IBAction func starDidTapped(sender: UIButton) {
-        print("star")
         if (self.btStar.currentImage!.isEqual(UIImage(named:"favorite")))   {
             self.btStar.setImage(UIImage(named: "favorite-select"), forState: .Normal)
         } else {

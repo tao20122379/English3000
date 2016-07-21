@@ -65,9 +65,10 @@ class MarkViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         return cell
     }
     
-    func handleEventDidTapSound(tag: Int) {
+    func handleEventDidTapSound(cell: UITableViewCell) {
+        let indexPath = self.tableMark.indexPathForCell(cell as! WordTableViewCell)
         let tabbar = self.navigationController?.tabBarController as! TabbarController
-        tabbar.CreateTextToSpeech(self.arrWords[tag].name)
+        tabbar.CreateTextToSpeech(self.arrWords[indexPath!.row].name)
     }
     
     func handleEventDidTapStar(cell: UITableViewCell) {

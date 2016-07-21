@@ -68,9 +68,10 @@ class WordViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     // MARK: - handle event of cell
 
-    func handleEventDidTapSound(tag: Int) {
+    func handleEventDidTapSound(cell: UITableViewCell) {
+        let indexPath = self.tableWord.indexPathForCell(cell as! WordTableViewCell)
         let tabbar = self.navigationController?.tabBarController as! TabbarController
-        tabbar.CreateTextToSpeech(self.arrWords[tag].name)
+        tabbar.CreateTextToSpeech(self.arrWords[indexPath!.row].name)
     }
     
     func handleEventDidTapStar(cell: UITableViewCell) {
