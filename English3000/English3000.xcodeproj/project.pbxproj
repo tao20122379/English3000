@@ -169,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				59D6D1D91D41311100A36ABB /* WordDetailServices.swift */,
+
 				511067461D40CE8500976B32 /* DatabaseManager.swift */,
 			);
 			path = Services;
