@@ -11,19 +11,23 @@ import UIKit
 class WordDetailServices: NSObject {
     
     class func getWordDetail(word: WordModel, completionHandler: CompletionHandler) {
-        
-        let searchKey = "@"+word.name+" /"+Constants().stringReplaces(word.read!, key: ["[", "]"])+"/"
-        
-        DatabaseManager().queryDatabase("dictd_anh_viet", executyQuery: "SELECT * FROM EVDictionary WHERE meaning LIKE \"%" + searchKey + "%\"") { (status, data) in
+        if word.read != nil {
+            let searchKey = "@"+word.name+" /"+Constants().stringReplaces(word.read!, key: ["[", "]"])+"/"
             
-            let rs = data as! FMResultSet
-            while rs.next() {
+            DatabaseManager().queryDatabase("dictd_anh_viet", executyQuery: "SELECT * FROM EVDictionary WHERE meaning LIKE \"%" + searchKey + "%\"") { (status, data) in
                 
-                let wordDtails: [String] = Constants().formatWordDetail(rs.stringForColumn("meaning"))
-                completionHandler(true, wordDtails)
+                let rs = data as! FMResultSet
+                while rs.next() {
+                    
+                    let wordDtails: [String] = Constants().formatWordDetail(rs.stringForColumn("meaning"))
+                    completionHandler(true, wordDtails)
+                    
+                }
                 
             }
-            
+        }
+        else {
+            completionHandler(false, [])
         }
     }
 }

@@ -25,7 +25,7 @@ class DatabaseManager {
                 print(error.localizedDescription)
             }
         }
-                
+        
         let database = FMDatabase(path: myDatabase)
         if !database.open() {
             print("Unable to open database")
@@ -39,19 +39,19 @@ class DatabaseManager {
         }
         database.close()
         
-//        let sourcePath = NSBundle.mainBundle().pathForResource(dbName, ofType: "sqlite")
-//        let database = FMDatabase(path: sourcePath)
-//        if !database.open() {
-//            print("Unable to open database")
-//            return
-//        }
-//        do {
-//            let resultDatas = try database.executeQuery(executyQuery, values: nil)
-//            completionHandler(true, resultDatas)
-//        } catch let error as NSError {
-//            completionHandler(false, error)
-//        }
-//        database.close()
+        //        let sourcePath = NSBundle.mainBundle().pathForResource(dbName, ofType: "sqlite")
+        //        let database = FMDatabase(path: sourcePath)
+        //        if !database.open() {
+        //            print("Unable to open database")
+        //            return
+        //        }
+        //        do {
+        //            let resultDatas = try database.executeQuery(executyQuery, values: nil)
+        //            completionHandler(true, resultDatas)
+        //        } catch let error as NSError {
+        //            completionHandler(false, error)
+        //        }
+        //        database.close()
     }
     
     func loadWord(dbName: String, executyQuery: String, completionHandler: CompletionHandler) {
@@ -60,15 +60,15 @@ class DatabaseManager {
             var resultDatas = Array<WordModel>()
             let rs = data as! FMResultSet
             while rs.next() {
-            let word = WordModel()
-            word.id = rs.stringForColumn("_id")
-            word.name = rs.stringForColumn("name")
-            word.category = rs.stringForColumn("category")
-            word.read = rs.stringForColumn("read")
-            word.vicontent = rs.stringForColumn("vicontent")
-            word.isread = rs.stringForColumn("isread")
-            word.state = rs.stringForColumn("state")
-            resultDatas.append(word)
+                let word = WordModel()
+                word.id = rs.stringForColumn("_id")
+                word.name = rs.stringForColumn("name")
+                word.category = rs.stringForColumn("category")
+                word.read = rs.stringForColumn("read")
+                word.vicontent = rs.stringForColumn("vicontent")
+                word.isread = rs.stringForColumn("isread")
+                word.state = rs.stringForColumn("state")
+                resultDatas.append(word)
             }
             completionHandler(true, resultDatas)
         }
@@ -90,7 +90,7 @@ class DatabaseManager {
             }
             completionHandler(true, resultDatas)
         }
-
+        
     }
     
     func loadTopic(dbName: String, executyQuery: String, completionHandler: CompletionHandler) {
@@ -120,7 +120,7 @@ class DatabaseManager {
             return
         }
         do {
-             try database.executeUpdate(executyQuery, values: nil)
+            try database.executeUpdate(executyQuery, values: nil)
         } catch let error as NSError {
             print(error.localizedDescription)
         }
