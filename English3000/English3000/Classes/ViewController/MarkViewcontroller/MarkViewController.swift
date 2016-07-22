@@ -65,6 +65,12 @@ class MarkViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         return cell
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let wordDetailVC = NSBundle.mainBundle().loadNibNamed("WordDetailViewController", owner: self, options: nil).first as! WordDetailViewController
+        wordDetailVC.wordModel = self.arrWords[indexPath.row]
+        self.navigationController?.pushViewController(wordDetailVC, animated: true)
+    }
+
     func handleEventDidTapSound(cell: UITableViewCell) {
         let indexPath = self.tableMark.indexPathForCell(cell as! WordTableViewCell)
         let tabbar = self.navigationController?.tabBarController as! TabbarController

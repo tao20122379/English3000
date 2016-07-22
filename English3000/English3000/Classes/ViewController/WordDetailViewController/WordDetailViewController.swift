@@ -37,7 +37,6 @@ class WordDetailViewController: BaseViewController , UITableViewDelegate, UITabl
     func getWordDetail() {
         WordDetailServices.getWordDetail(self.wordModel!) { (stats, data) in
             self.wordDetailList = data as! [String]
-            print(self.wordDetailList)
         }
     }
     
@@ -70,7 +69,9 @@ class WordDetailViewController: BaseViewController , UITableViewDelegate, UITabl
     }
     
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return NSBundle.mainBundle().loadNibNamed("HeaderView", owner: self, options: nil).first as! HeaderView
+        let headerView = NSBundle.mainBundle().loadNibNamed("HeaderView", owner: self, options: nil).first as! HeaderView
+        headerView.nameLabel.text = self.wordModel?.name
+        return headerView
     }
 
 }
