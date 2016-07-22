@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class BaseViewController: UIViewController {
     
     //MARK: Variable and IBOutlet
@@ -73,4 +74,5 @@ class BaseViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = rightBarButtonItem
     }
 
+   
 }

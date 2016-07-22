@@ -4,6 +4,7 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'English3000' do
+pod 'FMDB'
 
 end
 
