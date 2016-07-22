@@ -10,6 +10,10 @@ import UIKit
 
 class HeaderView: UIView {
 
+    // MARK: - IBoutlet and variable
+    @IBOutlet var nameLabel: UILabel!
+    
+    // MARK: - Button Action
     @IBAction func soundDidClicked(sender: AnyObject) {
         print("sound")
     }

@@ -169,7 +169,6 @@
 			isa = PBXGroup;
 			children = (
 				59D6D1D91D41311100A36ABB /* WordDetailServices.swift */,
-
 				511067461D40CE8500976B32 /* DatabaseManager.swift */,
 			);
 			path = Services;
@@ -506,7 +505,6 @@
 				TargetAttributes = {
 					59FD6CBD1D3F33210010F6A1 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = H2BTSUH442;
 					};
 					59FD6CD11D3F33210010F6A1 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -891,7 +889,7 @@
 				INFOPLIST_FILE = English3000/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = khactao.English3000;
+				PRODUCT_BUNDLE_IDENTIFIER = English3000;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "English3000-Bridging-Header.h";
@@ -908,7 +906,7 @@
 				INFOPLIST_FILE = English3000/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = khactao.English3000;
+				PRODUCT_BUNDLE_IDENTIFIER = English3000;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "English3000-Bridging-Header.h";

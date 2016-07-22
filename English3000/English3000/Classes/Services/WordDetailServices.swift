@@ -16,9 +16,7 @@ class WordDetailServices: NSObject {
         
         DatabaseManager().queryDatabase("dictd_anh_viet", executyQuery: "SELECT * FROM EVDictionary WHERE meaning LIKE \"%" + searchKey + "%\"") { (status, data) in
             
-            
             let rs = data as! FMResultSet
-            
             while rs.next() {
                 
                 let wordDtails: [String] = Constants().formatWordDetail(rs.stringForColumn("meaning"))

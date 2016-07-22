@@ -107,7 +107,7 @@ class Constants {
     
     internal func formatWordDetail(text: String) -> [String] {
         var textFormat = text
-        textFormat = self.stringSpecialCharactor(textFormat, keyString: ["+", "\n="], withString: [":", "\n+"])
+        textFormat = self.stringSpecialCharactor(textFormat, keyString: ["+", "\n ", "\n="], withString: [":", "","\n+ "])
         return textFormat.componentsSeparatedByString("\n")
     }
     
@@ -118,6 +118,7 @@ class Constants {
         else {
             if text[text.startIndex] == "@" {
                 return .WordLineTypeName
+                
             }
             else if text[text.startIndex] == "*" {
                 return .WordLineTypeTitle
